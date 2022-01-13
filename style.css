@@ -1,0 +1,42 @@
+body {
+    text-align: center;
+    background-color: rgba(240, 229, 229, 0.74);
+}
+#livesLeft {
+  visibility: hidden;
+  text-align: right;
+  margin-right: 80px;
+  font-size: 25px;
+}
+#startButton {
+  text-align: center;
+}
+#lettersButtons {
+  text-align:center;
+}
+.keyboard {
+  background-color: #6be95a;
+  width: 25px;
+  height: 25px;
+}
+#searchedWord {
+  display: flex;
+}
+.box {
+  width: 30px;
+  height: 30px;
+  border: 2px solid goldenrod;
+  margin: 10px;
+  text-align: center;
+}
+#correctAnswer {
+    visibility: hidden;
+    text-align: center;
+}
+#gameFinished {
+    visibility: hidden;
+    text-align: center;
+}
+#hangman {
+    margin-top: 50px;
+}

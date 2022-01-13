@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <script type="text/javascript" src="functions.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HANGMAN</h1>
+        <h2>Choose the correct letters!</h2>
+        <button id="startButton" onclick= "createButtons()">Let's START!</button>
+        <div id="livesLeft">Lives left: <span id="lives">6</span></div>
+        <h1 id="gameFinished"></h1>
+        <h1 id="correctAnswer"></h1>
+        <div id="searchedWord"></div>
+        <h1></h1>
+        <div id="lettersButtons"></div>
+    </div>
+</body>
+</html>
