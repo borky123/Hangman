@@ -40,3 +40,7 @@ body {
 #hangman {
     margin-top: 50px;
 }
+#hangmanImg {
+  visibility: hidden;
+  margin-top: 40px;
+}
