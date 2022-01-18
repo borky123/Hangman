@@ -52,7 +52,7 @@ function letterCheck(btnValue) {
             findedPos = true;
             ++wonCounter;
             if (wonCounter == choosedWord.length) {
-                gameFinished();
+                gameFinished("WOW!! You WON ");
             }           
         }
     }
@@ -60,34 +60,21 @@ function letterCheck(btnValue) {
         document.getElementById("lives").textContent = --lives;
         document.getElementById(btnValue).style.backgroundColor = "#e95f5a";
         if (lives == 0) {
-            gameFinished();
+            gameFinished("GAME OVER !!!");
         }
     }
     var img = document.getElementById("hangmanImg");
-    img.innerHTML = '<img src="man' + lives + '.png">';
+    img.innerHTML = '<img src="Images/man' + lives + '.png">';
     document.getElementById(btnValue).disabled = true;
     console.log(choosedWord);
 }
 
-function gameFinished() {
-    if (lives == 0) {
-    //GAMEOVER
-        document.getElementById("gameFinished").style.visibility = "visible";
-        document.getElementById("gameFinished").textContent = "GAME OVER !!!";
-        document.getElementById("correctAnswer").style.visibility = "visible";
-        document.getElementById("correctAnswer").textContent += "Correct answer is: " + choosedWord;
-        document.getElementById("searchedWord").style.visibility = "hidden";
-        document.querySelectorAll('button.keyboard').forEach(elem => {
-            elem.disabled = true;}); 
-    }
-    if (wonCounter == choosedWord.length) {
-    //GAMEWON
-        document.getElementById("gameFinished").style.visibility = "visible";
-        document.getElementById("gameFinished").textContent = "WOW!! You WON ";
-        document.getElementById("correctAnswer").style.visibility = "visible";
-        document.getElementById("correctAnswer").textContent += choosedWord;
-        document.getElementById("searchedWord").style.visibility = "hidden";
-        document.querySelectorAll('button.keyboard').forEach(elem => {
-            elem.disabled = true;});
-    }
+function gameFinished(message) {
+    document.getElementById("correctAnswer").textContent += "The answer is: " + choosedWord;
+    document.getElementById("gameFinished").textContent = message;
+    document.getElementById("correctAnswer").style.visibility = "visible";
+    document.getElementById("gameFinished").style.visibility = "visible";
+    document.getElementById("searchedWord").style.visibility = "hidden";
+    document.querySelectorAll('button.keyboard').forEach(elem => {
+        elem.disabled = true;});
 }

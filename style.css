@@ -1,6 +1,6 @@
 body {
-    text-align: center;
-    background-color: rgba(240, 229, 229, 0.74);
+  text-align: center;
+  background-color: rgba(240, 229, 229, 0.74);
 }
 #livesLeft {
   visibility: hidden;
@@ -12,7 +12,7 @@ body {
   text-align: center;
 }
 #lettersButtons {
-  text-align:center;
+  text-align: center;
 }
 .keyboard {
   background-color: #6be95a;
@@ -30,17 +30,17 @@ body {
   text-align: center;
 }
 #correctAnswer {
-    visibility: hidden;
-    text-align: center;
+  visibility: hidden;
+  text-align: center;
 }
 #gameFinished {
-    visibility: hidden;
-    text-align: center;
+  visibility: hidden;
+  text-align: center;
 }
 #hangman {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 #hangmanImg {
   visibility: hidden;
-  margin-top: 40px;
+  margin: 50px;
 }
